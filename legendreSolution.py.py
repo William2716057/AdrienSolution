@@ -28,4 +28,10 @@ def replace_none_with_zeros(arr):
     return [0 if x is None else x for x in arr]
 
 result = replace_none_with_zeros(bits)
-print(result)
+#print(result)
+
+split_data = [result[i:i + 8] for i in range(0, len(result), 8)]
+
+for group in split_data:
+    print(group)
+
